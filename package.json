@@ -1,12 +1,12 @@
 {
   "name": "ember-lz-string",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember wrapper for lz-string, an LZ-based compression algorithm",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Devin Weaver (@sukima) <suki@tritarget.org>",
   "directories": {
     "doc": "doc",
     "test": "tests"
