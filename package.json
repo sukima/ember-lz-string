@@ -1,6 +1,6 @@
 {
   "name": "ember-lz-string",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Ember wrapper for lz-string, an LZ-based compression algorithm",
   "keywords": [
     "ember-addon"
