@@ -3,7 +3,32 @@ import { getOwner } from '@ember/application';
 import { get } from '@ember/object';
 import LZString from 'lz-string';
 
+/**
+ * Ipsum unde nulla beatae cum blanditiis perspiciatis Blanditiis repudiandae
+ * fuga adipisci eos doloremque! Optio libero iste modi hic odio. Deserunt
+ * dignissimos ab veritatis voluptatem ipsa quisquam. Saepe quo illo sapiente?
+ *
+ * ```js
+ * export default Route.extends(LZQueryParams, {
+ *   queryParams: {
+ *     foobar: { type: 'lz' }
+ *   }
+ * });
+ * ```
+ *
+ * @class LZQueryParams
+ * @public
+ */
 export default Mixin.create({
+  /**
+   * Will serialize query params of type `lz`.
+   * @method serializeQueryParam
+   * @param {Any} value the deserialized value of the parameter
+   * @param {String} urlKey the query param key
+   * @param {String} defaultValueType the type of the param
+   * @return {String} the serialized value
+   * @private
+   */
   serializeQueryParam(value, urlKey, defaultValueType) {
     if (defaultValueType === 'lz') {
       return LZString.compressToEncodedURIComponent(JSON.stringify(value));
@@ -18,6 +43,15 @@ export default Mixin.create({
     return this._super(...arguments);
   },
 
+  /**
+   * Will deserialize query params of type `lz`.
+   * @method deserializeQueryParam
+   * @param {String} value the serialized value of the parameter
+   * @param {String} urlKey the query param key
+   * @param {String} defaultValueType the type of the param
+   * @return {Any} the deserialized value
+   * @private
+   */
   deserializeQueryParam(value, urlKey, defaultValueType) {
     if (defaultValueType === 'lz') {
       return JSON.parse(LZString.decompressFromEncodedURIComponent(value));

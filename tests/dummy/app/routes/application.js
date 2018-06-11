@@ -3,6 +3,6 @@ import { LZQueryParamsMixin } from 'ember-lz-string';
 
 export default Route.extend(LZQueryParamsMixin, {
   queryParams: {
-    foo: { type: 'lz' }
+    foobar: { type: 'lz' }
   }
 });
