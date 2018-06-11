@@ -4,5 +4,11 @@
     "name": "feature/gh-pages-docs",
     "sha": "e6d7509a7cf7c7117544c227a927f1b65a876c82",
     "tag": null
+  },
+  "master": {
+    "path": "master",
+    "name": "master",
+    "sha": "718fb6c6cda4d1998d9257bcf9ef6288fbb4371c",
+    "tag": null
   }
 }
