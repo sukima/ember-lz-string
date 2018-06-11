@@ -1,10 +1,4 @@
 {
-  "master": {
-    "path": "master",
-    "name": "master",
-    "sha": "718fb6c6cda4d1998d9257bcf9ef6288fbb4371c",
-    "tag": null
-  },
   "v1.0.1": {
     "path": "v1.0.1",
     "name": "v1.0.1",
